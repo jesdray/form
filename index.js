@@ -17,19 +17,6 @@ const listProduct1 = {
                     "valume": "100"
                 }
             ]
-        },
-        {
-            "name": "Уходовая продукция",
-            "products": [
-                {
-                    "code": "01 SHAMPOO THE DOCTOR",
-                    "valume": "100"
-                },
-                {
-                    "code": "06 SHAMPOO SILVER HAIR",
-                    "valume": "1000"
-                }
-            ]
         }
     ]
 }
@@ -210,8 +197,72 @@ const listProduct3 = {
                 }
             ]
         },
+        {
+            "name": "ывзфоцвфцв",
+            "products": [
+                {
+                    "code": "Что",
+                    "valume": "1"
+                },
+                {
+                    "code": "фыв2",
+                    "valume": "9999999"
+                },
+                {
+                    "code": "Что",
+                    "valume": "1"
+                },
+                {
+                    "code": "фыв2",
+                    "valume": "9999999"
+                }
+            ]
+        },
+        {
+            "name": "ывзфоцвфцв",
+            "products": [
+                {
+                    "code": "Что",
+                    "valume": "1"
+                },
+                {
+                    "code": "фыв2",
+                    "valume": "9999999"
+                },
+                {
+                    "code": "Что",
+                    "valume": "1"
+                },
+                {
+                    "code": "фыв2",
+                    "valume": "9999999"
+                }
+            ]
+        },
+        {
+            "name": "Hello WORLD",
+            "products": [
+                {
+                    "code": "123",
+                    "valume": "10"
+                },
+                {
+                    "code": "124afsgr",
+                    "valume": "9999999"
+                },
+                {
+                    "code": "Poswd2",
+                    "valume": "19566"
+                },
+                {
+                    "code": "asdw",
+                    "valume": "9"
+                }
+            ]
+        },
     ]
 }
+
 // Кнопки для имитации получения разных данных
 const btn_1 = document.querySelector('.btn_1');
 const btn_2 = document.querySelector('.btn_2');
@@ -228,6 +279,7 @@ class Product {
         this.value
     }
 
+    // получает Template категории и устанавливает название раздела
     _getTemplateBox(name) {
         const element = document.querySelector(this._selectorBox).content.querySelector(".order__product-box").cloneNode(true);
         element.querySelector(".order__product-category").textContent = name;
@@ -235,6 +287,7 @@ class Product {
         return element;
     }
 
+    // получает Template продукта, устанавливает события на кнопки и название товара
     _getTemplateProduct(element) {
         const product = document.querySelector(this._selectorProduct).content.querySelector(".order__product").cloneNode(true);
         product.querySelector(".order__product-name").textContent = element.code + " " + element.valume + "ml";
@@ -244,6 +297,7 @@ class Product {
         return product;
     };
 
+    // устанавливает события на кнопки
     _setEventListener(element) {
         element.querySelector(".order__product-button_script_minus").addEventListener("click", () => {
             this.decreaseValume(element)
@@ -254,6 +308,7 @@ class Product {
         })
     };
 
+    // Увеличивает значение на 1
     increaseValume(element) {
         this.value = element.querySelector(".order__product-input").value
 
@@ -262,6 +317,7 @@ class Product {
         element.querySelector(".order__product-input").value = this.value
     }
 
+    // уменьшает значение на 1
     decreaseValume(element) {
         this.value = element.querySelector(".order__product-input").value
 
@@ -270,6 +326,7 @@ class Product {
         element.querySelector(".order__product-input").value = this.value
     }
 
+    // Создает поле товара
     createOrder() {
         this._data.forEach(element => {
             this._TemplateBox = this._getTemplateBox(element.name);
@@ -286,8 +343,8 @@ class Product {
 };
 
 const submitButton = document.querySelector(".order__button-submit");
-const resetButton = document.querySelector(".order__button-reset");
 
+// функция отправки формы
 function submitForm(e) {
     e.preventDefault();
 }
@@ -327,7 +384,6 @@ function open3List() {
 }
 
 submitButton.addEventListener("click", submitForm);
-// resetButton.addEventListener('click', resetForm)
 
 btn_1.addEventListener("click", open1List);
 btn_2.addEventListener("click", open2List);
