@@ -17,57 +17,14 @@
     <form class="form">
         <div class="order">
             <h2 class="order__tittle">Новый заказ</h2>
-            <div class="order__product-box">
-                <h3 class="order__product-category">краситель</h3>
-                <div class="order__product">
-                    <p class="order__product-name">2101 100ml</p>
-                    <div class="order__product-number">
-                        <button class="order__product-button">-</button>
-                        <input class="order__product-input" type="number" value="0" min="0" max="200" />
-                        <button class="order__product-button">+</button>
-                    </div>
-                </div>
-                <div class="order__product">
-                    <p class="order__product-name">2341 100ml</p>
-                    <div class="order__product-number">
-                        <button class="order__product-button">-</button>
-                        <input class="order__product-input" type="number" value="0" min="0" max="200" />
-                        <button class="order__product-button">+</button>
-                    </div>
-                </div>
-                <div class="order__product">
-                    <p class="order__product-name">934 100ml</p>
-                    <div class="order__product-number">
-                        <button class="order__product-button">-</button>
-                        <input class="order__product-input" type="number" value="0" min="0" max="200" />
-                        <button class="order__product-button">+</button>
-                    </div>
-                </div>
+            <div class="order__box"></div>
+            <div class="order__button-box">
+                <input class="order__button order__button-reset" type="reset" />
+                <button class="order__button order__button-submit" type="submit">Заказать</button>
             </div>
-            <div class="order__product-box">
-                <h3 class="order__product-category">Уходовая продукция</h3>
-                <div class="order__product">
-                    <p class="order__product-name">шампунь 100ml</p>
-                    <div class="order__product-number">
-                        <button class="order__product-button">-</button>
-                        <input class="order__product-input" type="number" value="0" min="0" max="200" />
-                        <button class="order__product-button">+</button>
-                    </div>
-                </div>
-                <div class="order__product">
-                    <p class="order__product-name">шампунь 1000ml</p>
-                    <div class="order__product-number">
-                        <button class="order__product-button">-</button>
-                        <input class="order__product-input" type="number" value="0" min="0" max="200" />
-                        <button class="order__product-button">+</button>
-                    </div>
-                </div>
-
-                <div class="order__button-box">
-                    <button class="order__button">Сброс</button>
-                    <button class="order__button order__button-submit" type="submit">Заказать</button>
-                </div>
-            </div>
+            <!-- это просто болванка чтобы кнопки встали куда надо -->
+            <div class="order__footer"></div>
+        </div>
         </div>
     </form>
 
@@ -81,9 +38,9 @@
         <div class="order__product">
             <p class="order__product-name"></p>
             <div class="order__product-number">
-                <button class="order__product-button" name="" aria-label="-"></button>
-                <input class="order__product-input" name="" type="number" value="0" min="0" max="200" />
-                <button class="order__product-button" name="" aria-label="+"></button>
+                <div class="order__product-button order__product-button_script_minus">-</div>
+                <input class="order__product-input" name="" type="number" value="0" min="0"/>
+                <div class="order__product-button order__product-button_script_plus">+</div>
             </div>
         </div>
     </template>

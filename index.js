@@ -1,5 +1,5 @@
-
-const listProdut = {
+// Просто данные
+const listProduct1 = {
     "categories": [
         {
             "name": "Краситель",
@@ -34,51 +34,300 @@ const listProdut = {
     ]
 }
 
-class Product {
-    constructor(data) {
-        console.log(data);
+const listProduct2 = {
+    "categories": [
+        {
+            "name": "Краситель",
+            "products": [
+                {
+                    "code": "212u941720481-2",
+                    "valume": "100"
+                },
+                {
+                    "code": "23411",
+                    "valume": "100"
+                },
+                {
+                    "code": "931241",
+                    "valume": "10000"
+                },
+                {
+                    "code": "9312561667941",
+                    "valume": "12"
+                },
+                {
+                    "code": "932341",
+                    "valume": "115"
+                }
 
-    }
+            ]
+        },
+        {
+            "name": "Уходовая продукция",
+            "products": [
+                {
+                    "code": "01 SHAMPOO THE DOCTOR",
+                    "valume": "20"
+                },
+                {
+                    "code": "03 SHAMPOO SILVER HAIR",
+                    "valume": "1000"
+                },
+                {
+                    "code": "09 asf;jpiwegsko;ijdchnhveadf",
+                    "valume": "1000"
+                },
+                {
+                    "code": "10 a213asduohjpowrpR",
+                    "valume": "1000"
+                }
+            ]
+        }
+    ]
+}
 
-    _getTemplateBox() {
-        const box = document.querySelector("template-box").content.querySelector(".order__product-box").cloneNode(true);
+const listProduct3 = {
+    "categories": [
+        {
+            "name": "Краситель",
+            "products": [
+                {
+                    "code": "212u941720481-2",
+                    "valume": "100"
+                }
 
-        return box;
-    }
-
-    _getTemplateProduct() {
-        const product = document.querySelector("template-product").content.querySelector(".order__product-box").cloneNode(true);
-
-        return product;
-    }
-};
-
+            ]
+        },
+        {
+            "name": "Уходовая продукция",
+            "products": [
+                {
+                    "code": "01 SHAMPOO THE DOCTOR",
+                    "valume": "20"
+                },
+                {
+                    "code": "03 SHAMPOO SILVER HAIR",
+                    "valume": "1000"
+                }
+            ]
+        },
+        {
+            "name": "ывзфоцвфцв",
+            "products": [
+                {
+                    "code": "Что",
+                    "valume": "1"
+                },
+                {
+                    "code": "фыв2",
+                    "valume": "9999999"
+                }
+            ]
+        },
+        {
+            "name": "ывзфоцвфцв",
+            "products": [
+                {
+                    "code": "Что",
+                    "valume": "1"
+                },
+                {
+                    "code": "фыв2",
+                    "valume": "9999999"
+                }
+            ]
+        },
+        {
+            "name": "ывзфоцвфцв",
+            "products": [
+                {
+                    "code": "Что",
+                    "valume": "1"
+                },
+                {
+                    "code": "фыв2",
+                    "valume": "9999999"
+                }
+            ]
+        },
+        {
+            "name": "ывзфоцвфцв",
+            "products": [
+                {
+                    "code": "Что",
+                    "valume": "1"
+                },
+                {
+                    "code": "фыв2",
+                    "valume": "9999999"
+                },
+                {
+                    "code": "Что",
+                    "valume": "1"
+                },
+                {
+                    "code": "фыв2",
+                    "valume": "9999999"
+                }
+            ]
+        },
+        {
+            "name": "ывзфоцвфцв",
+            "products": [
+                {
+                    "code": "Что",
+                    "valume": "1"
+                },
+                {
+                    "code": "фыв2",
+                    "valume": "9999999"
+                }
+            ]
+        },
+        {
+            "name": "ывзфоцвфцв",
+            "products": [
+                {
+                    "code": "Что",
+                    "valume": "1"
+                },
+                {
+                    "code": "фыв2",
+                    "valume": "9999999"
+                }
+            ]
+        },
+        {
+            "name": "ывзфоцвфцв",
+            "products": [
+                {
+                    "code": "Что",
+                    "valume": "1"
+                },
+                {
+                    "code": "фыв2",
+                    "valume": "9999999"
+                }
+            ]
+        },
+    ]
+}
+// Кнопки для имитации получения разных данных
 const btn_1 = document.querySelector('.btn_1');
 const btn_2 = document.querySelector('.btn_2');
 const btn_3 = document.querySelector('.btn_3');
 
-const order = document.querySelector('.form')
+// Сборщик формы
+// На вход нужно дать данные из categories
+class Product {
+    constructor(data, selectorBox, selectorProduct, formSelection) {
+        this._data = data;
+        this._selectorBox = selectorBox;
+        this._selectorProduct = selectorProduct;
+        this._formSelection = formSelection;
+        this.value
+    }
 
+    _getTemplateBox(name) {
+        const element = document.querySelector(this._selectorBox).content.querySelector(".order__product-box").cloneNode(true);
+        element.querySelector(".order__product-category").textContent = name;
+
+        return element;
+    }
+
+    _getTemplateProduct(element) {
+        const product = document.querySelector(this._selectorProduct).content.querySelector(".order__product").cloneNode(true);
+        product.querySelector(".order__product-name").textContent = element.code + " " + element.valume + "ml";
+        product.querySelector(".order__product-input").name = element.code;
+        this._setEventListener(product);
+
+        return product;
+    };
+
+    _setEventListener(element) {
+        element.querySelector(".order__product-button_script_minus").addEventListener("click", () => {
+            this.decreaseValume(element)
+        })
+
+        element.querySelector(".order__product-button_script_plus").addEventListener("click", () => {
+            this.increaseValume(element)
+        })
+    };
+
+    increaseValume(element) {
+        this.value = element.querySelector(".order__product-input").value
+
+        this.value = +this.value + 1;
+
+        element.querySelector(".order__product-input").value = this.value
+    }
+
+    decreaseValume(element) {
+        this.value = element.querySelector(".order__product-input").value
+
+        this.value = this.value != 0 ? this.value - 1 : 0;
+
+        element.querySelector(".order__product-input").value = this.value
+    }
+
+    createOrder() {
+        this._data.forEach(element => {
+            this._TemplateBox = this._getTemplateBox(element.name);
+            element.products.forEach(element => {
+                this._TemplateProduct = this._getTemplateProduct(element);
+                this._TemplateBox.append(this._TemplateProduct);
+                document.querySelector(this._formSelection).append(this._TemplateBox);
+            })
+        });
+        this._TemplateBox.append(this._TemplateProduct);
+
+        document.querySelector(this._formSelection).append(this._TemplateBox);
+    };
+};
+
+const submitButton = document.querySelector(".order__button-submit");
+const resetButton = document.querySelector(".order__button-reset");
+
+function submitForm(e) {
+    e.preventDefault();
+}
+
+
+// Константа формы для открытия и закрытия
+const order = document.querySelector('.form');
+
+// загружает форму товаром
 function renderList(data) {
-    const list = new Product(data)
-    console.log(list);
+    console.log(document.querySelector(".order__box").innerHTML);
+    const list = new Product(data.categories, ".template-box", ".template-product", ".order__box");
+    list.createOrder();
 
-    return list
+    return list;
 }
 
 function open1List() {
-    order.classList.add("form_active")
+    document.querySelector(".order__box").innerHTML = "";
+    renderList(listProduct1)
+
+    order.classList.add("form_active");
 }
 
 function open2List() {
-    order.classList.add("form_active")
+    document.querySelector(".order__box").innerHTML = "";
+    renderList(listProduct2)
+
+    order.classList.add("form_active");
 }
 
 function open3List() {
-    renderList(listProdut)
+    document.querySelector(".order__box").innerHTML = "";
+    renderList(listProduct3);
 
-    order.classList.add("form_active")
+    order.classList.add("form_active");
 }
+
+submitButton.addEventListener("click", submitForm);
+// resetButton.addEventListener('click', resetForm)
 
 btn_1.addEventListener("click", open1List);
 btn_2.addEventListener("click", open2List);
