@@ -9,49 +9,86 @@
 </head>
 
 <body>
-    <form class="order">
-        <h2 class="order__tittle">Новый заказ</h2>
-        <div class="order__product-box">
-            <h3 class="order__product-category">краситель</h3>
-            <div class="order__product">
-                <p class="order__product-name">2101 100ml</p>
-                <div class="order__product-number">
-                    <button class="order__product-button">-</button>
-                    <p class="order__product-number border">0</p>
-                    <button class="order__product-button">+</button>
+    <div class="div">
+        <button class="btn btn_1">1 список</button>
+        <button class="btn btn_2">2 список</button>
+        <button class="btn btn_3">3 список</button>
+    </div>
+    <form class="form">
+        <div class="order">
+            <h2 class="order__tittle">Новый заказ</h2>
+            <div class="order__product-box">
+                <h3 class="order__product-category">краситель</h3>
+                <div class="order__product">
+                    <p class="order__product-name">2101 100ml</p>
+                    <div class="order__product-number">
+                        <button class="order__product-button">-</button>
+                        <input class="order__product-input" type="number" value="0" min="0" max="200" />
+                        <button class="order__product-button">+</button>
+                    </div>
+                </div>
+                <div class="order__product">
+                    <p class="order__product-name">2341 100ml</p>
+                    <div class="order__product-number">
+                        <button class="order__product-button">-</button>
+                        <input class="order__product-input" type="number" value="0" min="0" max="200" />
+                        <button class="order__product-button">+</button>
+                    </div>
+                </div>
+                <div class="order__product">
+                    <p class="order__product-name">934 100ml</p>
+                    <div class="order__product-number">
+                        <button class="order__product-button">-</button>
+                        <input class="order__product-input" type="number" value="0" min="0" max="200" />
+                        <button class="order__product-button">+</button>
+                    </div>
                 </div>
             </div>
-            <div class="order__product">
-                <p class="order__product-name">2341 100ml</p>
-                <div class="order__product-number">
-                    <button class="order__product-button border">-</button>
-                    <p class="order__product-number border">0</p>
-                    <button class="order__product-button border">+</button>
+            <div class="order__product-box">
+                <h3 class="order__product-category">Уходовая продукция</h3>
+                <div class="order__product">
+                    <p class="order__product-name">шампунь 100ml</p>
+                    <div class="order__product-number">
+                        <button class="order__product-button">-</button>
+                        <input class="order__product-input" type="number" value="0" min="0" max="200" />
+                        <button class="order__product-button">+</button>
+                    </div>
                 </div>
-            </div>
-            <div class="order__product">
-                <p class="order__product-name">934 100ml</p>
-                <div class="order__product-number">
-                    <button class="order__product-button">-</button>
-                    <input class="order__product-input" value="0" />
-                    <button class="order__product-button">+</button>
+                <div class="order__product">
+                    <p class="order__product-name">шампунь 1000ml</p>
+                    <div class="order__product-number">
+                        <button class="order__product-button">-</button>
+                        <input class="order__product-input" type="number" value="0" min="0" max="200" />
+                        <button class="order__product-button">+</button>
+                    </div>
                 </div>
-            </div>
 
+                <div class="order__button-box">
+                    <button class="order__button">Сброс</button>
+                    <button class="order__button order__button-submit" type="submit">Заказать</button>
+                </div>
+            </div>
+        </div>
     </form>
-    <div class="order__product-box">
-        <h3 class="order__product-category">Уходорвая продукция</h3>
-        <div class="order__product">
-            <p class="order__product-name">шампунь 100ml</p>
 
+    <template class="template-box">
+        <div class="order__product-box">
+            <h3 class="order__product-category"></h3>
         </div>
+    </template>
+
+    <template class="template-product">
         <div class="order__product">
-            <p class="order__product-name">шампунь 1000ml</p>
-
+            <p class="order__product-name"></p>
+            <div class="order__product-number">
+                <button class="order__product-button" name="" aria-label="-"></button>
+                <input class="order__product-input" name="" type="number" value="0" min="0" max="200" />
+                <button class="order__product-button" name="" aria-label="+"></button>
+            </div>
         </div>
+    </template>
 
-    </div>
-    </div>
+    <script src="./index.js"></script>
 </body>
 
 </html>
