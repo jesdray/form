@@ -20,7 +20,6 @@ const listProduct1 = {
         }
     ]
 }
-
 const listProduct2 = {
     "categories": [
         {
@@ -72,7 +71,6 @@ const listProduct2 = {
         }
     ]
 }
-
 const listProduct3 = {
     "categories": [
         {
@@ -348,13 +346,18 @@ const submitButton = document.querySelector(".order__button-submit");
 function submitForm(e) {
     e.preventDefault();
 
-    const inp = order.querySelectorAll(".order__product-input")
+    const data = order.querySelectorAll(".order__product-box")
     const value = [];
-    inp.forEach(e => {
-        value.push({
-            "code": e.name,
-            "value": e.value
-        });
+    data.forEach(e => {
+        const category = e.querySelector('.order__product-category').textContent;
+        const inp = e.querySelectorAll('.order__product-input')
+        inp.forEach(e => {
+            value.push({
+                "name": category,
+                "code": e.name,
+                "value": e.value
+            });
+        })
     })
     console.log(value);
 
@@ -366,7 +369,6 @@ const order = document.querySelector('.form');
 
 // загружает форму товаром
 function renderList(data) {
-    console.log(document.querySelector(".order__box").innerHTML);
     const list = new Product(data.categories, ".template-box", ".template-product", ".order__box");
     list.createOrder();
 
