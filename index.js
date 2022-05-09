@@ -6,15 +6,15 @@ const listProduct1 = {
             "products": [
                 {
                     "code": "21011",
-                    "valume": "100"
+                    "volume": "100"
                 },
                 {
                     "code": "23411",
-                    "valume": "100"
+                    "volume": "100"
                 },
                 {
                     "code": "9341",
-                    "valume": "100"
+                    "volume": "100"
                 }
             ]
         }
@@ -28,23 +28,23 @@ const listProduct2 = {
             "products": [
                 {
                     "code": "212u941720481-2",
-                    "valume": "100"
+                    "volume": "100"
                 },
                 {
                     "code": "23411",
-                    "valume": "100"
+                    "volume": "100"
                 },
                 {
                     "code": "931241",
-                    "valume": "10000"
+                    "volume": "10000"
                 },
                 {
                     "code": "9312561667941",
-                    "valume": "12"
+                    "volume": "12"
                 },
                 {
                     "code": "932341",
-                    "valume": "115"
+                    "volume": "115"
                 }
 
             ]
@@ -80,7 +80,7 @@ const listProduct3 = {
             "products": [
                 {
                     "code": "212u941720481-2",
-                    "valume": "100"
+                    "volume": "100"
                 }
 
             ]
@@ -90,11 +90,11 @@ const listProduct3 = {
             "products": [
                 {
                     "code": "01 SHAMPOO THE DOCTOR",
-                    "valume": "20"
+                    "volume": "20"
                 },
                 {
                     "code": "03 SHAMPOO SILVER HAIR",
-                    "valume": "1000"
+                    "volume": "1000"
                 }
             ]
         },
@@ -103,11 +103,11 @@ const listProduct3 = {
             "products": [
                 {
                     "code": "Что",
-                    "valume": "1"
+                    "volume": "1"
                 },
                 {
                     "code": "фыв2",
-                    "valume": "9999999"
+                    "volume": "9999999"
                 }
             ]
         },
@@ -116,11 +116,11 @@ const listProduct3 = {
             "products": [
                 {
                     "code": "Что",
-                    "valume": "1"
+                    "volume": "1"
                 },
                 {
                     "code": "фыв2",
-                    "valume": "9999999"
+                    "volume": "9999999"
                 }
             ]
         },
@@ -129,11 +129,11 @@ const listProduct3 = {
             "products": [
                 {
                     "code": "Что",
-                    "valume": "1"
+                    "volume": "1"
                 },
                 {
                     "code": "фыв2",
-                    "valume": "9999999"
+                    "volume": "9999999"
                 }
             ]
         },
@@ -142,19 +142,19 @@ const listProduct3 = {
             "products": [
                 {
                     "code": "Что",
-                    "valume": "1"
+                    "volume": "1"
                 },
                 {
                     "code": "фыв2",
-                    "valume": "9999999"
+                    "volume": "9999999"
                 },
                 {
                     "code": "Что",
-                    "valume": "1"
+                    "volume": "1"
                 },
                 {
                     "code": "фыв2",
-                    "valume": "9999999"
+                    "volume": "9999999"
                 }
             ]
         },
@@ -163,11 +163,11 @@ const listProduct3 = {
             "products": [
                 {
                     "code": "Что",
-                    "valume": "1"
+                    "volume": "1"
                 },
                 {
                     "code": "фыв2",
-                    "valume": "9999999"
+                    "volume": "9999999"
                 }
             ]
         },
@@ -176,11 +176,11 @@ const listProduct3 = {
             "products": [
                 {
                     "code": "Что",
-                    "valume": "1"
+                    "volume": "1"
                 },
                 {
                     "code": "фыв2",
-                    "valume": "9999999"
+                    "volume": "9999999"
                 }
             ]
         },
@@ -189,11 +189,11 @@ const listProduct3 = {
             "products": [
                 {
                     "code": "Что",
-                    "valume": "1"
+                    "volume": "1"
                 },
                 {
                     "code": "фыв2",
-                    "valume": "9999999"
+                    "volume": "9999999"
                 }
             ]
         },
@@ -202,19 +202,19 @@ const listProduct3 = {
             "products": [
                 {
                     "code": "Что",
-                    "valume": "1"
+                    "volume": "1"
                 },
                 {
                     "code": "фыв2",
-                    "valume": "9999999"
+                    "volume": "9999999"
                 },
                 {
                     "code": "Что",
-                    "valume": "1"
+                    "volume": "1"
                 },
                 {
                     "code": "фыв2",
-                    "valume": "9999999"
+                    "volume": "9999999"
                 }
             ]
         },
@@ -223,19 +223,19 @@ const listProduct3 = {
             "products": [
                 {
                     "code": "Что",
-                    "valume": "1"
+                    "volume": "1"
                 },
                 {
                     "code": "фыв2",
-                    "valume": "9999999"
+                    "volume": "9999999"
                 },
                 {
                     "code": "Что",
-                    "valume": "1"
+                    "volume": "1"
                 },
                 {
                     "code": "фыв2",
-                    "valume": "9999999"
+                    "volume": "9999999"
                 }
             ]
         },
@@ -244,19 +244,19 @@ const listProduct3 = {
             "products": [
                 {
                     "code": "123",
-                    "valume": "10"
+                    "volume": "10"
                 },
                 {
                     "code": "124afsgr",
-                    "valume": "9999999"
+                    "volume": "9999999"
                 },
                 {
                     "code": "Poswd2",
-                    "valume": "19566"
+                    "volume": "19566"
                 },
                 {
                     "code": "asdw",
-                    "valume": "9"
+                    "volume": "9"
                 }
             ]
         },
@@ -290,7 +290,7 @@ class Product {
     // получает Template продукта, устанавливает события на кнопки и название товара
     _getTemplateProduct(element) {
         const product = document.querySelector(this._selectorProduct).content.querySelector(".order__product").cloneNode(true);
-        product.querySelector(".order__product-name").textContent = element.code + " " + element.valume + "ml";
+        product.querySelector(".order__product-name").textContent = element.code + " " + element.volume + "ml";
         product.querySelector(".order__product-input").name = element.code;
         this._setEventListener(product);
 
@@ -347,6 +347,17 @@ const submitButton = document.querySelector(".order__button-submit");
 // функция отправки формы
 function submitForm(e) {
     e.preventDefault();
+
+    const inp = order.querySelectorAll(".order__product-input")
+    const value = [];
+    inp.forEach(e => {
+        value.push({
+            "code": e.name,
+            "value": e.value
+        });
+    })
+    console.log(value);
+
 }
 
 
